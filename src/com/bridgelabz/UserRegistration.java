@@ -61,5 +61,28 @@ public class UserRegistration {
 		else
 			System.out.println("Invalid password rule4");
 
+
+		String text = "valid sample email addresses:"+
+				"        //  1. abc@yahoo.com,\n" +
+				"        //• 2. abc-100@yahoo.com,\n" +
+				"        //• 3. abc.100@yahoo.com\n" +
+				"        //• 4. abc111@abc.com,\n" +
+				"        //• 5. abc-100@abc.net,\n" +
+				"        //• 6. abc.100@abc.com.au\n" +
+				"        //• 7. abc@1.com,\n" +
+				"        //• 8. abc@gmail.com.com\n" +
+				"        //• 9. abc+100@gmail.com";
+
+
+		String emailPattern = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}";
+
+		Pattern pattern8 = Pattern.compile(emailPattern);
+		Matcher matcher8 = pattern8.matcher(text);
+		System.out.println("Valid emails are : ");
+		while (matcher8.find()) {
+			String email = matcher8.group();
+			System.out.println(email);
+		}
+
 	}
 }
