@@ -40,12 +40,19 @@ public class UserRegistration {
 		else
 			System.out.println("Invalid password rule1");
 
-		Pattern pattern5 = Pattern.compile("^[A-Za-z]{8,}$");
+		Pattern pattern5 = Pattern.compile("^(?=[a-z]*[A-Z]).{8,}$");
 		Matcher matcher5 = pattern.matcher("myPassword");
 		if (matcher.matches())
 			System.out.println("valid password rule2");//atleast1uppercase
 		else
 			System.out.println("Invalid password rule2");
+
+		Pattern pattern6 = Pattern.compile("^(?=[a-z]*[A-Z])(?=.*[0-9]).{8,}$");
+		Matcher matcher6 = pattern6.matcher("Password21");
+		if (matcher6.matches())
+			System.out.println("valid password rule3");
+		else
+			System.out.println("Invalid password rule3");
 
 	}
 }
