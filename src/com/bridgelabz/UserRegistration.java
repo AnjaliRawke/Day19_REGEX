@@ -33,8 +33,8 @@ public class UserRegistration {
 		else
 			System.out.println("Invalid phone number");
 
-		Pattern pattern4 = Pattern.compile("^[A-Za-z]{8,}$");
-		Matcher matcher4 = pattern.matcher("myPassword");
+		Pattern pattern4 = Pattern.compile("^[a-z]{8,}$");
+		Matcher matcher4 = pattern.matcher("mypassword");
 		if (matcher.matches())
 			System.out.println("valid password rule1");//rule1-minimum 8 characters
 		else
