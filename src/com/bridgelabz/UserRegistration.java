@@ -26,5 +26,12 @@ public class UserRegistration {
 		else
 			System.out.println("Invalid email");
 
+		Pattern pattern3 = Pattern.compile("^(\\+?\\d{1,3})\s\\d{10}$");
+		Matcher matcher3 = pattern.matcher("+91 7058162286");
+		if (matcher.matches())
+			System.out.println("valid phone number");
+		else
+			System.out.println("Invalid phone number");
+
 	}
 }
