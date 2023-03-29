@@ -50,9 +50,16 @@ public class UserRegistration {
 		Pattern pattern6 = Pattern.compile("^(?=[a-z]*[A-Z])(?=.*[0-9]).{8,}$");
 		Matcher matcher6 = pattern6.matcher("Password21");
 		if (matcher6.matches())
-			System.out.println("valid password rule3");
+			System.out.println("valid password rule3");//atleast 1 numeric number
 		else
 			System.out.println("Invalid password rule3");
+
+		Pattern pattern7 = Pattern.compile("^(?=[a-z]*[A-Z])(?=.*[0-9])(?=.*[\\W_]).{8,}$");
+		Matcher matcher7 = pattern7.matcher("Password*123");
+		if (matcher7.matches())
+			System.out.println("valid password rule4");//exactly 1 special character
+		else
+			System.out.println("Invalid password rule4");
 
 	}
 }
