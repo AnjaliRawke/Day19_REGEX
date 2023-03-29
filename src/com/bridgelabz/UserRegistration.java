@@ -34,11 +34,18 @@ public class UserRegistration {
 			System.out.println("Invalid phone number");
 
 		Pattern pattern4 = Pattern.compile("^[a-z]{8,}$");
-		Matcher matcher4 = pattern.matcher("mypassword");
+		Matcher matcher4 = pattern.matcher("MyPassword");
 		if (matcher.matches())
 			System.out.println("valid password rule1");//rule1-minimum 8 characters
 		else
 			System.out.println("Invalid password rule1");
+
+		Pattern pattern5 = Pattern.compile("^[A-Za-z]{8,}$");
+		Matcher matcher5 = pattern.matcher("myPassword");
+		if (matcher.matches())
+			System.out.println("valid password rule2");//atleast1uppercase
+		else
+			System.out.println("Invalid password rule2");
 
 	}
 }
